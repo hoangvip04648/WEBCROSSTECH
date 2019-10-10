@@ -4,16 +4,15 @@ window.onscroll = function() {myFunction()};
 var flagCroll=1;
 function myFunction() {
   if(flagCroll){
+    console.log('vo dau ham rol')
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       flagCroll=0;
       document.getElementById("header").classList.add('fixed');
-    } else {
-      document.getElementById("header").classList.remove('fixed');
     }
-    if ( document.documentElement.scrollTop === 0) {
-      document.getElementById("header").classList.remove('fixed');
-      flagCroll=1;
-    }
+  }
+  if ( (document.documentElement.scrollTop === 0 )&&( $('.menu-mobile.active').length===0)) {
+    document.getElementById("header").classList.remove('fixed');
+    flagCroll=0;
   }
 }
 
@@ -37,11 +36,10 @@ function toggleMenu() {
   //404
   if((countClickMenu%2))
   {
-    document.getElementById("header").classList.remove('fixed');
-    
+    document.getElementById("header").classList.add('fixed');
   }
   else{
-    document.getElementById("header").classList.add('fixed');
+    document.getElementById("header").classList.remove('fixed');
   }
  }
  function closemenumobile(){
