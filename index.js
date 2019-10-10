@@ -1,12 +1,16 @@
 
 window.onscroll = function() {myFunction()};
 
+
 function myFunction() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     document.getElementById("header").classList.add('fixed');
   } else {
     document.getElementById("header").classList.remove('fixed');
   }
+}
+if(screen.width<765){
+  document.getElementById("header").classList.add('fixed');
 }
 
 

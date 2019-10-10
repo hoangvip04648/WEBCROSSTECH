@@ -28,8 +28,6 @@
         overflow: auto;
     }
     .menu-mobile.active .right-menu{
-        position: fixed;
-        right: 5px;
     }
     .menu-mobile .searchform{
         width: 100%;
