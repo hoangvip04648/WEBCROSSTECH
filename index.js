@@ -27,17 +27,20 @@ function toggleMobileMenu() {
     $('.item-menu-mobile.tapchi').toggleClass('active');
   }
 
+var countClickMenu=0;
 function toggleMenu() {
+  countClickMenu++;
+  console.log(countClickMenu)
   $('.item-menu-mobile.tapchi').removeClass('active');
   $('.item-menu-mobile.cuahang').removeClass('active');
   $('.menu-mobile').toggleClass('active');
-  if( $('.menu-mobile.active'))
+  //404
+  if((countClickMenu%2))
   {
     document.getElementById("header").classList.add('fixed');
-    console.log('a')
   }
   else{
-    console.log('b')
+    document.getElementById("header").classList.remove('fixed');
   }
  }
  function closemenumobile(){

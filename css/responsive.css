@@ -24,8 +24,10 @@
     }
     .menu-mobile.active {
         display: block;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 33px);
         overflow: auto;
+        position: fixed;
+        opacity: 0.9;
     }
     .menu-mobile.active .right-menu{
     }
