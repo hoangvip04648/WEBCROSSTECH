@@ -1,17 +1,22 @@
 
 window.onscroll = function() {myFunction()};
 
-
+var flagCroll=1;
 function myFunction() {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-    document.getElementById("header").classList.add('fixed');
-  } else {
+  if(flagCroll){
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      flagCroll=0;
+      document.getElementById("header").classList.add('fixed');
+    } else {
+      document.getElementById("header").classList.remove('fixed');
+    }
+  }
+  if ( document.documentElement.scrollTop === 0) {
     document.getElementById("header").classList.remove('fixed');
+    flagCroll=1;
   }
 }
-if(screen.width<765){
-  document.getElementById("header").classList.add('fixed');
-}
+
 
 
 function toggleMobileMenu1() {
@@ -26,6 +31,14 @@ function toggleMenu() {
   $('.item-menu-mobile.tapchi').removeClass('active');
   $('.item-menu-mobile.cuahang').removeClass('active');
   $('.menu-mobile').toggleClass('active');
+  if( $('.menu-mobile.active'))
+  {
+    document.getElementById("header").classList.add('fixed');
+    console.log('a')
+  }
+  else{
+    console.log('b')
+  }
  }
  function closemenumobile(){
   $('.menu-mobile').removeClass("active");
