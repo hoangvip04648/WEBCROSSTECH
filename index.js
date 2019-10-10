@@ -10,10 +10,10 @@ function myFunction() {
     } else {
       document.getElementById("header").classList.remove('fixed');
     }
-  }
-  if ( document.documentElement.scrollTop === 0) {
-    document.getElementById("header").classList.remove('fixed');
-    flagCroll=1;
+    if ( document.documentElement.scrollTop === 0) {
+      document.getElementById("header").classList.remove('fixed');
+      flagCroll=1;
+    }
   }
 }
 
@@ -37,10 +37,11 @@ function toggleMenu() {
   //404
   if((countClickMenu%2))
   {
-    document.getElementById("header").classList.add('fixed');
+    document.getElementById("header").classList.remove('fixed');
+    
   }
   else{
-    document.getElementById("header").classList.remove('fixed');
+    document.getElementById("header").classList.add('fixed');
   }
  }
  function closemenumobile(){
