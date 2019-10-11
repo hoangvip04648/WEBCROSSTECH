@@ -344,6 +344,60 @@ body{
     color:black!important;
     text-decoration: none!important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer{
+    width: 100%;
+    background: gray;
+    position: absolute;
+    padding: 15px;
+    margin-top: 150px;
+}
+.footer .icon-paymen{
+    margin:0 auto;
+    width:80%;
+    text-align:center;
+}
+.footer li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer .link-page{
+    text-align:center;
+}
+.footer .adddress{
+    text-align:center;
+}
+.fixed{
+    position: fixed;
+}
+.border{
+    border:1px solid black;
+}
+.clearfix{
+    content: "";
+    display: block;
+}
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+
+
+
 .fixed{
     position: fixed;
 }
