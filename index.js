@@ -4,7 +4,6 @@ window.onscroll = function() {myFunction()};
 var flagCroll=1;
 function myFunction() {
   if(flagCroll){
-    console.log('vo dau ham rol')
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       flagCroll=0;
       document.getElementById("header").classList.add('fixed');
@@ -12,7 +11,7 @@ function myFunction() {
   }
   if ( (document.documentElement.scrollTop === 0 )&&( $('.menu-mobile.active').length===0)) {
     document.getElementById("header").classList.remove('fixed');
-    flagCroll=0;
+    flagCroll=1;
   }
 }
 
@@ -39,7 +38,9 @@ function toggleMenu() {
     document.getElementById("header").classList.add('fixed');
   }
   else{
-    document.getElementById("header").classList.remove('fixed');
+    if(flagCroll===1){
+      document.getElementById("header").classList.remove('fixed');
+    }
   }
  }
  function closemenumobile(){
