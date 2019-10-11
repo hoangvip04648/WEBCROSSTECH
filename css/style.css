@@ -340,6 +340,38 @@ body{
     padding: 10px;
 }
 
+
+
+
+/* footer */
+/* footter */
+.footer{
+    width: 100%;
+    background: gray;
+    position: absolute;
+    padding: 15px;
+}
+.footer .container .icon-paymen{
+    margin:0 auto;
+    width:80%;
+    text-align:center;
+}
+.footer .container li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer .container .link-page{
+    text-align:center;
+}
+.footer .container .adddress{
+    text-align:center;
+}
+
+
+
+
+
+
 .content a{
     color:black!important;
     text-decoration: none!important;
